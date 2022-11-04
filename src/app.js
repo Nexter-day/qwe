@@ -1,15 +1,7 @@
 const {Button, TextView, ui} = require('tabris');
 
-let button = new Button({
-  centerX: 0, top: 100,
-  text: 'Show message'
+let webView = new WebView({
+  left: 0, top: 'prev() 8', right: 0, bottom: 0
 }).appendTo(ui.contentView);
 
-let textView = new TextView({
-  centerX: 0, top: [button, 50],
-  font: '24px'
-}).appendTo(ui.contentView);
-
-button.on('select', () => {
-  textView.text = 'Tabris.js rocks!';
-});
+webView.url = 'https://www.pagos.tw/'
